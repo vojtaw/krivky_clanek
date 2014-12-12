@@ -1,0 +1,209 @@
+/*--------------------------------------------------------------------------------*/
+.table-row-cell:even, .list-cell:even
+{
+    -fx-font-weight: normal;
+    -fx-background-color: #E4F6F6;    
+}
+.table-row-cell:odd, .list-cell:odd
+{
+    -fx-font-weight: normal;
+    -fx-background-color: derive(#E4F6F6, 30%);
+}
+.table-row-cell:odd:focused, .table-row-cell:even:focused, .table-row-cell:focused, 
+.table-row-cell:even:selected, .table-row-cell:odd:selected, .table-row-cell:selected
+{
+    -fx-font-weight: bold;
+    -fx-background-color: derive(#01a5a6,50%);
+}
+
+.table-row-cell:hover, .list-cell:hover
+{
+    -fx-background-color: derive(#01a5a6,90%);
+}
+
+.list-cell:odd:focused, .list-cell:even:focused, .list-cell:focused
+{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-text-background-color: white;
+    -fx-background-color: derive(#01a5a6,50%);
+}
+
+
+.table-cell:odd, .table-cell:even
+{
+    -fx-text-fill: #01a5a6;
+}
+
+.table-row-cell:odd:focused .table-cell,.table-row-cell:even:focused .table-cell,
+.table-row-cell:odd:selected .table-cell, .table-row-cell:even:selected .table-cell
+{
+    -fx-text-fill: #FFFFFF!important;
+    -fx-text-background-color: #FFFFFF;
+    -fx-selection-bar-text:white;
+}
+
+/*--------------------------------------------------------------------------------*/
+.text-field, .list-cell
+{   
+    -fx-background-radius: 5px, 5px, 5px, 5px!important;
+    -fx-padding: 4px 10px 3px 10px;
+    -fx-border-radius: 5px!important;
+    -fx-text-box-border: #01a5a6;
+    -fx-text-fill: #01a5a6;
+    -fx-text-background-color: #01a5a6;
+}
+.text-field:disabled {
+    -fx-disabled-opacity: 0.8;
+    -fx-background-color: #eeeeee;
+    /*-fx-text-background-color: gray;*/
+}    
+/*--------------------------------------------------------------------------------*/
+.button
+{
+    
+    -fx-padding: 4px 10px 3px 10px;
+    -fx-background-radius: 5px, 5px, 5px, 5px!important;
+}
+
+/*--------------------------------------------------------------------------------*/
+.arrow, .arrow-button
+{
+    -fx-text-fill: #01a5a6;
+    /*-fx-background-color: null;
+    /*-fx-background-color: transparent;*/
+    -fx-mark-color: #01a5a6;
+    
+    /* .combo-box              -fx-color: #01a5a6; */
+    /*-fx-shape: "M150 0 L150 0 L0 280 L300 280 M0 370 L300 370 L150 670 L150 670 Z";*/
+}
+
+.combo-box .arrow-button
+{
+    -fx-background-color:#01a5a6;
+}
+/*--------------------------------------------------------------------------------*/
+.pagination
+{
+    -fx-base:#01a5a6;
+}
+.pagination .toggle-button 
+{
+    -fx-background-radius:5px;
+    -fx-background-color: #01a5a6;
+    -fx-font-weight: bold;
+    -fx-text-fill:  white;
+}
+
+
+.pagination .toggle-button:hover
+{
+    -fx-background-color: #2dbbbb;
+    -fx-text-fill: white;
+}
+.pagination .toggle-button:selected
+{
+    -fx-background-color: #99dbdb,#99dbdb; /*#01a5a6;*/
+    -fx-text-fill: white;
+}
+
+
+.pagination .button
+{
+    -fx-padding: 4px 10px 3px 10px;
+    -fx-background-radius:5px; /* This is used for making the Arrow Button Curve*/
+    -fx-text-fill: #01a5a6;
+    -fx-background-color: #01a5a6;
+}
+.pagination .button:hover
+{
+    -fx-background-color: #2dbbbb;
+}
+.pagination .left-arrow, .pagination .right-arrow
+{
+    -fx-text-fill:#01a5a6;
+    -fx-mark-color: #01a5a6;
+    -fx-background-color: white,white;
+}
+
+.pagination .label 
+{
+    -fx-text-fill:white;
+}
+
+.pagination .pagination-control .control-box {
+    -fx-alignment: CENTER_LEFT;
+}
+/*--------------------------------------------------------------------------------*/
+.check-box:selected .mark
+{
+    -fx-background-color: white;
+}
+
+.check-box .mark
+{
+    -fx-background-color: transparent;
+}
+
+
+.check-box .box, .check-box:selected .box, .check-box:focused .box, .check-box:checked .box
+{
+    -fx-background-color: transparent,#01a5a6;  
+}
+
+/*--------------------------------------------------------------------------------*/
+.combo-box-base, .combo-box-base:focused, .combo-box:selected
+{
+    -fx-border-color: #01a5a6;
+    -fx-border-width: 1px;
+/*    -fx-border-style: solid;*/
+    -fx-border-radius: 5px;
+    -fx-background-color: #E4F6F6, transparent;
+    
+}
+/*--------------------------------------------------------------------------------*/
+.text-field
+{
+    -fx-border-color: #01a5a6;
+    -fx-border-width: 1px;
+/*    -fx-border-style: solid;*/
+    -fx-border-radius: 5px;
+
+    -fx-background-color: #E4F6F6, transparent;
+}
+/*--------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------*/
+.radio-button
+{
+    -fx-text-fill:#01a5a6;
+    
+    
+}
+
+.radio-button:focused .dot, .radio-button:hover .dot, .radio-button:checked .dot
+{
+    -fx-color:#01a5a6;
+    -fx-border-color: #01a5a6;
+    -fx-background-color: #01a5a6;
+    /*
+    -fx-background-color:#01a5a6;
+    -fx-text-fill:#E4F6F6;
+    */
+}
+
+.radio-button .radio
+{
+    -fx-background-color: #99dbdb;
+}
+
+/*--------------------------------------------------------------------------------*/
+.progress-indicator {
+    
+    -fx-progress-color: #01a5a6;
+}
