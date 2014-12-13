@@ -1,4 +1,7 @@
-package cz.tul.curve;
+package cz.tul.cc;
+
+import cz.tul.cc.discretization.DiscretizationTest;
+import cz.tul.cc.point.Point;
 
 /** ************************************************************************
  *
@@ -11,6 +14,9 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("Křivky");
+        DiscretizationTest test = new DiscretizationTest(2000);
+        test.test();
     }
+    
     
 }
