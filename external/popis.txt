@@ -1,0 +1,9 @@
+Referenční křivku jsme zvolili parabolu z důvodu snadného výpočtu její délky pomocí určitého integrálu.
+Parabola vždy prochází body [0, 0] a [1,0]
+Obecná rovnice paraboly y=ax2+bx+c se pro parabolu procházející souřadnicí [0,0] redukuje na tvar y=ax2+bx 
+a pro parabolu procgházející bodem [1,0] pak platí a = -b, resp. -a =b; 
+po dosazení pak bude mít rovnice tvar y = -ax2+ax = a(-x2+x), pro x=0,5 pak získáme koeficient a
+y = a(-0,25+0,5) = a(0,25) a pro y <0,2; 0,002> je a = 1/4<0,2; 0,002>
+Vrchol paraboly umístíme na x souřadnici 0,5 a její y souřadnici budeme měnit v rozsahu 0,002 - 0,2 s krokem 0,002.
+y = a(-x2+x), a = 1/4<0,2; 0,002> s krokem 0,002
+Délka je Intg(sqrt(1+ f'2)
