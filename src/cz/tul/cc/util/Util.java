@@ -11,14 +11,27 @@ public class Util {
 	private static org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(Util.class.getName());
 	private static java.util.Properties props = null;// = new java.util.Properties();
 	
+        private String dbURL = "jdbc:derby:";
+        private String dbPath = "z:\\job_bagr\\mc\\db\\mc\\";
+    
+        
+        
 	public Util() {
 //		if (props == null){
 //			setProperties();
 //			setVariables();
 //		}
+            
+//            try {
+//            org.apache.log4j.PropertyConfigurator.configure(AppConstant.appPath + lcfFile);
+//        } catch (Exception e) {
+//            cat.error("Could not configure log4j:" + e.getMessage());
+//        }
 	}
 	
-
+        public static String getText(String key){
+            return key;
+        }
 	
 	/**********************************************************************/
 	/** bezier constants **************************************************/
@@ -26,7 +39,7 @@ public class Util {
 	/**@description number of space dimension 2 for 2d space, 3 for 3D space*/
 	public static int dimension = 2;
         /**@description number of steps for computation, eg. for length */
-	public static int numberOfSteps = 20;
+	public static int numberOfStepsForBernsteinLinear = 20;
 	
 	/**@desc its used for comparing double values
 	 * abs(double1-double2)>DOUBLE_PRECISION --> false */

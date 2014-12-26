@@ -64,7 +64,7 @@ public class CurveSegment extends AbstractCurve {
              * free lenght can be setup only once, after filaments are
              * calcualted
              */
-            this.freeLength = computeSegmentFreeLength(new BernsteinPolynom(Util.numberOfSteps));
+            this.freeLength = computeSegmentFreeLength(new BernsteinPolynom(Util.numberOfStepsForBernsteinLinear));
         }
     }
 
@@ -117,7 +117,7 @@ public class CurveSegment extends AbstractCurve {
 //    }
     public List<Line> lineList() {
         List<Line> lines = new ArrayList<Line>();
-        double step = 1.0 / (double) Util.numberOfSteps;
+        double step = 1.0 / (double) Util.numberOfStepsForBernsteinLinear;
         Point p1 = this.B.get(0);
         Point p2;
         double[] coord = new double[Util.dimension];

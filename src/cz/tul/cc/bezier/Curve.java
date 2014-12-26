@@ -27,7 +27,7 @@ public abstract class Curve {
         double len = 0.0;
         for (CurveSegment cs : curve) {
             double sl = cs.getFreeLength();
-            logger.info("Segment length:" + sl);
+//            logger.info("Segment length:" + sl);
             len += sl;//cs.segmentFreeLength(new BernsteinPolynom(Constants.NUMBER_OF_STEPS));
         };
 
@@ -37,10 +37,10 @@ public abstract class Curve {
     public double actualFreeLength() {
         double len = 0.0;
         for (CurveSegment cs : curve) {
-            double sl = cs.computeSegmentFreeLength(new BernsteinPolynom(Util.numberOfSteps));
-            logger.info("Segment length:" + sl);
+            double sl = cs.computeSegmentFreeLength(new BernsteinPolynom(Util.numberOfStepsForBernsteinLinear));
+//            logger.info("Segment length:" + sl);
             len += sl;//cs.segmentFreeLength(new BernsteinPolynom(Constants.NUMBER_OF_STEPS));
-        };
+        }
 
         return len;
     }

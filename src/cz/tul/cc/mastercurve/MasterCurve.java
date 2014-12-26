@@ -10,11 +10,11 @@ import java.util.List;
  * @author wojta
  */
 public class MasterCurve implements MasterCurveInterface{
-    private double lenght;
+    private double length;
     private double koefA;
     
     public MasterCurve(double koefA){
-        this.lenght = 0.0;
+        this.length = 0.0;
         this.koefA = koefA;
         _computeLength();
     }
@@ -30,7 +30,12 @@ public class MasterCurve implements MasterCurveInterface{
     }
     @Override
     public double getLength(){
-        return lenght;
+        return length;
+    }
+
+    @Override
+    public double getCurvatureRatio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     /**********************************************************************
@@ -58,4 +63,29 @@ public class MasterCurve implements MasterCurveInterface{
         points.add(endPoint);
         return points;
     }
+    
+    @Override
+    public Point getStartPoint() {
+        return startPoint;
+    }
+
+    @Override
+    public Point getMidPoint() {
+        return null;
+    }
+
+    @Override
+    public Point getEndPoint() {
+        return endPoint;
+    }
+    @Override
+    public double getAlpha() {
+        return 0;
+    }
+
+    @Override
+    public Point getCentrePoint() {
+        return null;
+    }
+    
 }

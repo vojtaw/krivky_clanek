@@ -16,6 +16,13 @@ public interface MasterCurveInterface {
     final Point endPoint = new Point(1.0, 0.0);
     
     public double getLength();
+    public double getCurvatureRatio();
+    public double getAlpha();
     public List<Point> getDiscretizationPoints(int numberOfParts);
+    
+    public Point getStartPoint();
+    public Point getMidPoint();
+    public Point getEndPoint();
+    public Point getCentrePoint();
     
 }
