@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class MasterCircle implements MasterCurveInterface {
 
+    private int curveId;
     private double lenght;
     private Point centre;
     private double diameter;
@@ -23,6 +24,7 @@ public class MasterCircle implements MasterCurveInterface {
     private double curvatureRatio;
     
     public MasterCircle(Point bPoint, Point cPoint) {
+        this.curveId = 0;
         this.lenght = 0.0;
         this.centre = new Point(0.0, 0.0);
         this.aPoint = startPoint;
@@ -35,6 +37,7 @@ public class MasterCircle implements MasterCurveInterface {
     }
 
     public MasterCircle(Point bPoint) {
+        this.curveId = 0;
         this.lenght = 0.0;
         this.centre = new Point(0.0, 0.0);
         this.aPoint = startPoint;
@@ -48,6 +51,7 @@ public class MasterCircle implements MasterCurveInterface {
     }
     
     public MasterCircle(CurveBean cb) {
+        this.curveId = cb.getId();
         this.lenght = cb.getArcLength();
         this.centre = new Point(0.0, 0.0);
         this.aPoint = new Point(cb.getStartX(), cb.getStartY());
@@ -56,6 +60,7 @@ public class MasterCircle implements MasterCurveInterface {
         this.centre = new Point(cb.getCentreX(), cb.getCentreY());
         this.alpha = cb.getAlpha();
         this.curvatureRatio = cb.getCurvatureRatio();
+        _computeDiameter();
     }
 
     /** *********************************************************************
@@ -93,8 +98,20 @@ public class MasterCircle implements MasterCurveInterface {
         k3 = (bPoint.getX() * bPoint.getX() - 2 * bPoint.getX() * k2 + bPoint.getY() * bPoint.getY()) / (2 * bPoint.getY());
 
         centre = new Point(k2, k3);
-        diameter = 2 * Math.sqrt(centre.getX() * centre.getX() + centre.getY() * centre.getY());
+        _computeDiameter();
 //        System.out.println("Centre: " + centre.toString() + ", diameter: " + diameter);
+        return;
+
+    }
+    
+    /** *********************************************************************
+     * Compute <strong>diameter</strong> of circle
+     * circle goes through pont[0,0], so diameter is 2*sqrt(cx2+cy2) 
+     *
+     * @return
+     */
+    private void _computeDiameter() {
+        diameter = 2 * Math.sqrt(centre.getX() * centre.getX() + centre.getY() * centre.getY());
         return;
 
     }
@@ -221,6 +238,11 @@ public class MasterCircle implements MasterCurveInterface {
         return root1 >= 0 ? root1 : root2;
     }
 
+    @Override
+    public int getCurveId() {
+        return curveId;
+    }
+    
     @Override
     public Point getStartPoint() {
         return startPoint;

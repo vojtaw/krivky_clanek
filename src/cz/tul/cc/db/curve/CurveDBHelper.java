@@ -111,7 +111,7 @@ public class CurveDBHelper extends DB {
         bean.setCentreY(rs.getDouble(CurveDBFieldsEnum.FIELD_CENTRE_Y.getField()));
         bean.setAlpha(rs.getDouble(CurveDBFieldsEnum.FIELD_ALPHA.getField()));
         bean.setCurvatureRatio(rs.getDouble(CurveDBFieldsEnum.FIELD_CURVATURE_RATIO.getField()));
-        bean.setArcLength(rs.getInt(CurveDBFieldsEnum.FIELD_ARC_LENGTH.getField())); //TODO
+        bean.setArcLength(rs.getDouble(CurveDBFieldsEnum.FIELD_ARC_LENGTH.getField()));
         return bean;
     }
 

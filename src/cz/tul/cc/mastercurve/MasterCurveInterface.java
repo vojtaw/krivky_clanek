@@ -15,6 +15,7 @@ public interface MasterCurveInterface {
     final Point startPoint = new Point(0.0, 0.0);
     final Point endPoint = new Point(1.0, 0.0);
     
+    public int getCurveId();
     public double getLength();
     public double getCurvatureRatio();
     public double getAlpha();

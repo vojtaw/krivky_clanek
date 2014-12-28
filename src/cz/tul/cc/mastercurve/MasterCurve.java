@@ -63,6 +63,11 @@ public class MasterCurve implements MasterCurveInterface{
         points.add(endPoint);
         return points;
     }
+
+    @Override
+    public int getCurveId() {
+        return 0;
+    }
     
     @Override
     public Point getStartPoint() {

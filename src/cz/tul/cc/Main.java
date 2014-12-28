@@ -35,7 +35,10 @@ public class Main {
         }
         logger.debug("Křivky");
         Krivky krivky = new Krivky();
-        krivky.generateCurves();
+//        krivky.generateCurves();
+        krivky.loadCurves();
+        krivky.compute();
+//        krivky.showCurves();
         
         
 //        MasterCircle c = new MasterCircle(new Point(0.5, 0.5), new Point(2.0, 0.0));
